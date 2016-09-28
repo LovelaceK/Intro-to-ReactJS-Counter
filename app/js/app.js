@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 class App extends React.Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = { val: 0 };
     this.increment = this.increment.bind(this);
     this.decrement = this.decrement.bind(this);
@@ -20,11 +20,11 @@ class App extends React.Component {
   render(){
     return (
       <div>
-      <button onClick={this.increment}>'+'</button>
-      <button onClick={this.decrement}>'-'</button>
-      <div id='app'>{this.state.val}</div>
+        <button onClick={this.increment}>+</button>
+        <button onClick={this.decrement}>-</button>
+        <div>{this.state.val}</div>
       </div>
-    )
+    );
   }
 }
-export default App
+export default App;
